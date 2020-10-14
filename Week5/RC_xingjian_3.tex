@@ -75,14 +75,34 @@
 \end{frame}
 
 \begin{frame}
+    \frametitle{RC Policy}
+    Several things I want you to pay attention to:
+    \begin{enumerate}
+        \item \alarm{Be interactive.} Feel free to interrupt me at any time if you want to ask something or simply make some comments. You are free to discuss with your friend if you want, as long as your discussion is related to the course contents and your voice won't effect other students.
+        \item Speak everything in \alarm{English} during the RC. This might be hard at the beginning, but you will soon get used to that.
+        \item \alarm{``Question everything.''} Do not pretend to have understood everything. Maths is about strictness, abstraction and generalization. Understanding every basic concept is essential in our course. I will be quite ``push'' on checking your conceptual understanding. This process will be \textbf{annoying, tedious, but rewarding}. So Get prepared.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
     \frametitle{Outline}
     \begin{spacing}{1}
         \tableofcontents
     \end{spacing}
 \end{frame}
 
-\section{Sequence}
-\subsection{Cauchy Sequence}
+\section{Assignment}
+\begin{frame}
+    \frametitle{Assignment 2}
+    \begin{enumerate}
+        \item Feedback is posted on \href{https://piazza.com/class/kdvbtz3cxva7mb?cid=52}{VV186 Piazza - Feedback for Assignment2}.
+        \item Come to OH if you have further questions.
+    \end{enumerate}
+\end{frame}
+
+
+\section{Sequences}
+\subsection{Metric}
 \begin{frame}
     \frametitle{Metric \& Metric Space}
     \begin{figure}[H]
@@ -99,7 +119,7 @@
         \item $\R^+$ with $d(x,y)=|\log(y/x)|$
         \item $\operatorname{Conv}(\R)$ with $d(x,y)=\sup|x-y|$. Notice that $x,y$ are real convergent sequences. (We will see this example in details later!)
         \item * \emph{The Discrete Metric.} Any set $M$ with $d(x,y)=0$ if $x=y$, $d(x,y)=1$ otherwise. This shows for any set, there is always a metric space associated with it. Moreover, by this metric, the set of any single point is an open ball (why?), and therefore every subset is open -- The space is discrete (has the \emph{discrete topology}.)
-        \item * We will come back to metric space when we learn normed vector space. We will then conclude that any normed vector space is a metric space.
+        \item * We will come back to metric space when we learn normed vector space. We will then conclude that any normed vector space is a metric space if we define the metric according to its norm.
     \end{enumerate}
 
 \end{frame}
@@ -116,6 +136,7 @@
     We then well-define the boundedness of sequence by it.
 \end{frame}
 
+\subsection{Cauchy Sequence}
 \begin{frame}
     \frametitle{Cauchy Sequence}
 
@@ -135,25 +156,26 @@
     \end{enumerate}
 \end{frame}
 
+\subsection{Construction of $\R$}
 \begin{frame}
     \frametitle{A Recap on Construction of $\R$}
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\textwidth]{2020-10-13-20-08-40.png}
     \end{figure}
-    \textbf{Remark:} 
-    \begin{enumerate}[<+->]
+    \textbf{Remark:}
+    \begin{enumerate}
         \item $\sim $ denotes an \emph{equivalence relation} between two elements in some set.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}
     \frametitle{A Recap on Construction of $\R$}
-\begin{figure}[H]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\textwidth]{2020-10-13-21-11-42.png}
     \end{figure}
-    \textbf{Remark:} 
+    \textbf{Remark:}
     \begin{enumerate}
         \item The equivalence relation is extremely useful in this situation. Because if $R$ is an equivalence relation on a set $M$, then for all $a,b\in M$, either $[a]\cap [b]=\emptyset$ or $[a]=[b]$. (Why? And Why is this even useful?)
         \item The equivalence classes \textbf{partition} the set $M$!
@@ -164,28 +186,28 @@
 
 \begin{frame}
     \frametitle{A Recap on Construction of $\R$}
-\begin{figure}[H]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\textwidth]{2020-10-13-21-18-29.png}
     \end{figure}
-    \textbf{Remark:} 
+    \textbf{Remark:}
     \begin{enumerate}
         \item We define a new relationship between two Cauchy sequences, which is more general than the previous equivalence relationship.
         \item We therefore consider this $\sim$ to be a generalization of the previous $\sim$ -- So we reuse the same symbol.
         \item Finally, we have a larger set:
-        $$\operatorname{Cauchy}(\mathbb{Q}) / \sim \supset \operatorname{Conv}(\mathbb{Q}) / \sim \simeq \mathbb{Q}$$
+              $$\operatorname{Cauchy}(\mathbb{Q}) / \sim \supset \operatorname{Conv}(\mathbb{Q}) / \sim \simeq \mathbb{Q}$$
     \end{enumerate}
 \end{frame}
 
 \begin{frame}
     \frametitle{A Recap on Construction of $\R$}
-\begin{figure}[H]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\textwidth]{2020-10-13-21-23-38.png}
     \end{figure}
-    \textbf{Remark:} 
+    \textbf{Remark:}
     \begin{enumerate}
-        \item We then \textbf{define} the set of real numbers to be this larger set. 
+        \item We then \textbf{define} the set of real numbers to be this larger set.
         \item Recall how did we construct the natural numbers $\N_{def}$? Sets!
     \end{enumerate}
 \end{frame}
@@ -207,18 +229,158 @@
     $$U=\{(a_n)|\exists N\in\N,\forall n>N:a_n=0\}.$$
     It is clear that $U\subset c_0$, where $$c_0=\{(a_n)|\lim a_n = 0\}.$$
     We use the metric $$\rho((a_n),(b_n))=\sup|a_n-b_n|.$$
-    Define a sequence of sequences $(a_n^{(N)})\in U$, $$(a_n^{(N)})=\left\{\begin{matrix}
-        \dfrac{1}{n},\, n\leq N\\[8pt]
-        0,\, n>N
+    Define a sequence of sequences $(a_n)^{(N)}$, where $$(a_n)^{(N)}=\left\{\begin{matrix}
+            \dfrac{1}{n},\, n\leq N \\[8pt]
+            0,\, n>N
         \end{matrix}\right.$$
-    Is $(a_n^{(N)})$ a Cauchy sequence in $(U,\rho)$? Does $(a_n^{(N)})$ has a limit in this space? What is the completion of $(U,\rho)$?
+    Is $(a_n)^{(N)}$ a Cauchy sequence in $(U,\rho)$? Does $(a_n)^{(N)}$ has a limit in this space? \\ * What is the completion of $(U,\rho)$?
+
+\end{frame}
+
+\subsection{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+
+    Let $(a_n)$ be a real sequence satisfies
+    $$\forall n\in\N: \,|a_{n+2}-a_{n+1}|<c|a_{n+1}-a_{n}|,\qquad 0<c<1.$$
+    where $c$ is fixed. Is $(a_n)$ convergent or not? Prove.
+
+\end{frame}
+
+\section{Real Functions}
+
+\begin{frame}
+    \frametitle{Termiology}
+    Let's say we have a function $f$ such that
+    $$f:\Omega\to \R,\qquad x\mapsto f(x)$$
+    where $\Omega\subset\R$.
+    \begin{enumerate}
+        \item What is $f(x)$ essentially?
+        \item $f(x)$ is a real number.
+        \item What is $f$ essentially?
+        \item $f$ is a real function.
+    \end{enumerate}
+\end{frame}
+\subsection{Elementary Real Functions}
+\begin{frame}
+    \frametitle{Elementary Real Functions}
+
+    \begin{enumerate}
+        \item
+              \emph{Polynomial functions} are fundamental functions in real/complex analysis. Later, we use the series of polynomial functions to define \emph{(complex) exponential functions}. Moreover, it turns out to be a major ingredient of \alarm{Taylor's Theorem} -- a theorem with huge amounts of engineering applications! We will see some of them in this semester, hopefully.
+        \item
+              \emph{Power functions} or \emph{monomial functions} are the components of polynomial functions.
+        \item \emph{Rational functions} are quotients of polynomial functions.
+        \item \emph{Piecewise functions} are functions defined piecewise. Usually, they are not smooth in shape.
+        \item \emph{Periodic functions} are functions defined periodically. With \alarm{Fourier analysis}, they turn out to have GREAT significance in several engineering fields, such as \emph{Signal and Systems},\emph{Fluid mechanics}, \emph{Solid Mechanics}, \emph{Thermodynamics}, \emph{Electromagnetics}, \emph{Optimal Control}\dots
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Floor and Ceiling}
+
+    We defined two useful functions that round a real number to an integer: \emph{floor} and \emph{ceiling}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\textwidth]{2020-10-14-11-17-06.png}
+    \end{figure}
 
 \end{frame}
 
 \begin{frame}
+    \frametitle{Manipulating \& Describing Functions}
+
+    Both part are trivial. For manipulating functions, essentially we are composing the original function $f$ with some other function $g$ - not any new concept.
+
+\end{frame}
+
+\subsection{* Weird/Crazy Functions}
+\begin{frame}
+    \frametitle{* Weird/Crazy Functions}
+
+    We can construct some really weird and crazy functions. \nullspace
+
+    Go to \href{http://specialfunctionswiki.org/index.php/Main_Page}{specialfunctionswiki.org} and explore some!
+
+\end{frame}
+
+\section{Limits of Function}
+\subsection{Definition of Limits of Function}
+\begin{frame}
+    \frametitle{$x\to \infty$ vs. $x\to x_0$}
+    Write the definition of limits of functions, from memory if possible. 
+    \pause
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\textwidth]{2020-10-14-11-46-12.png}
+    \end{figure}
+    \pause
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\textwidth]{2020-10-14-11-46-54.png}
+    \end{figure}
+    \textbf{Remark:} These two definitions are essential when proving the convergence of functions. We will see an important theorem later(2.4.9), which is equally important in the proof.
+\end{frame}
+
+\subsection{Theorems}
+\begin{frame}
+    \frametitle{Limits of Two Functions after Operations}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\textwidth]{2020-10-14-11-55-18.png}
+    \end{figure}
+    
+    \textbf{Remark:} Useful, easy to memorize.
+\end{frame}
+\subsection{Exercise}
+\begin{frame}
     \frametitle{Exercise}
 
-    % find some exercise here
+    Find $$\underset{h\to 0}{\lim} {\dfrac{\sqrt{x+h}-\sqrt{x}}{h}}.$$
+
+    What's your observation? 
+\end{frame}
+
+\begin{frame}
+    \frametitle{Limits of Functions \& Sequences}
+
+    Here comes a theorem that is quite important but may not be intuitive.
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{2020-10-14-11-59-41.png}
+    \end{figure}
+    
+    \textbf{Remark:}
+    \begin{enumerate}
+        \item How to prove?
+        \item The limits of functions can be described entirely through sequences.
+        \item The negation of R.H.S. is useful if we want to prove some sequence does not have a limit at some point/infinity.
+    \end{enumerate}
+\end{frame}
+\subsection{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+
+    Prove\\
+    \centering
+    $\sin \dfrac{1}{x}$ does not have a limit at $0$.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Reminder}
+
+    \begin{itemize}
+        \item The first midterm exam is scheduled onto next Tuesday, lecture time.
+        \item A big RC will be held on Sunday. Vote up on its schedule \href{https://piazza.com/class/kdvbtz3cxva7mb?cid=60}{here on Piazza}.
+        \item General strategies to prepare for the exam:
+        \begin{enumerate}
+            \item Go through the lecture slides. Make sure you remember the definition and theorems. (Time permitting, re-prove every lemma/theorem on your own.)
+            \item Go through your assignments. Make sure you remember some concepts introduced in assignments. e.g. $\overline{\lim},\,\underline{\lim},\,\dots$
+            \item Do the sample exams.
+            \item Come to the big RC and OH.
+        \end{enumerate}
+        \item Good luck!
+    \end{itemize}
 
 \end{frame}
 
@@ -229,7 +391,7 @@
         \Large
         Have Fun \\
         And \\
-        Learn Well!\footnote[frame]{Special acknowledgement to former TA Zhang Leyang, who offered many exercises and advice to my recitation class.}
+        Learn Well!\footnote[frame]{Special acknowledgement to former TA \textbf{Zhang Leyang}, who offered plenty of exercises and advice to my recitation class.}
     \end{center}
 \end{frame}
 
