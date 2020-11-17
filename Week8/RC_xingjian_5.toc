@@ -1,0 +1,27 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {1}{Midterm 1}{4}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {1}{1}{Distribution}{4}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {1}{2}{Ex6}{5}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{Differentiation}{7}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {2}{1}{Leibniz Notation}{7}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {2}{2}{Extrema}{9}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {2}{3}{Mean Value Theorem}{13}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {2}{4}{Convexity and Concavity}{16}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {2}{5}{\textbf {Curve Sketching}}{18}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {2}{6}{L\IeC {\textquoteright }H\IeC {\^o}pital\IeC {\textquoteright }s Rule}{20}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{Vector Space}{21}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {3}{1}{Vector Space}{21}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {3}{2}{Normed Vector Space}{27}{0}{3}
